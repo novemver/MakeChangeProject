@@ -1,8 +1,8 @@
-package app;
+package lab;
 
 import java.util.Scanner;
 
-public class MakeChange {
+public class Snippet {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -15,10 +15,12 @@ public class MakeChange {
 		price = scan.nextDouble();
 		scan.nextLine();
 
+//		System.out.println("You entered: $" + price);
 
 		System.out.println("Enter cash amount: ");
 		cashTendered = scan.nextDouble();
 		scan.nextLine();
+//		System.out.println("You entered: $" + cashTendered);
 
 		changeDue = cashTendered - price;
 		int billChange = (int) changeDue;
@@ -46,6 +48,7 @@ public class MakeChange {
 	// Methods
 
 	public static void changeBill(double billChange) {
+//		System.out.println("change: " + billChange);
 		billChange = billChange % 20;
 		double tens = billChange / 10;
 		if (tens == 0) {
@@ -97,7 +100,8 @@ public class MakeChange {
 		}
 		coinChange = coinChange % 25;
 		dimes = coinChange / 10;
-		
+//		System.out.println(dimes);
+//		System.out.println(cents);
 		if (dimes < 1) {
 			System.out.print("");
 			
@@ -126,9 +130,25 @@ public class MakeChange {
 		if (coinChange < 0) {
 			System.out.print("");
 		} else if (coinChange > 1) {
+//			cents = Math.floor(cents);
 			System.out.print((int) pennies + " pennies. ");
 		} else {
 			System.out.print((int) pennies + " penny. ");
 		}
 	}
 }
+//	{
+//		dimes = cents / 10;
+//		System.out.print(Math.floor(dimes) + " dimes, ");
+//	}else if(cents>=5)
+//	{
+//		nickels = cents / 5;
+//		System.out.print(Math.floor(nickels) + " nickels, ");
+//	}else if(cents>=1)
+//	{
+//		pennies = cents / 1;
+//		System.out.print(Math.floor(pennies) + " pennies. ");
+//	}
+//
+//	}
+
